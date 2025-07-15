@@ -1,0 +1,50 @@
+/* Dark mode CSS for the extension */
+/* This file is injected automatically by the content script */
+
+/* Base dark mode styles */
+html[data-dark-mode="true"] {
+    filter: invert(1) hue-rotate(180deg) !important;
+    transition: filter 0.3s ease !important;
+}
+
+/* Preserve natural colors for media elements */
+html[data-dark-mode="true"] img,
+html[data-dark-mode="true"] video,
+html[data-dark-mode="true"] iframe,
+html[data-dark-mode="true"] svg,
+html[data-dark-mode="true"] object,
+html[data-dark-mode="true"] embed,
+html[data-dark-mode="true"] canvas,
+html[data-dark-mode="true"] picture {
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Handle background images */
+html[data-dark-mode="true"] [style*="background-image"] {
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Special handling for elements that should ignore dark mode */
+html[data-dark-mode="true"] [data-dark-mode-ignore] {
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Smooth transitions */
+html[data-dark-mode="true"] *,
+html[data-dark-mode="true"] *::before,
+html[data-dark-mode="true"] *::after {
+    transition: filter 0.3s ease !important;
+}
+
+/* Fix for some common issues */
+html[data-dark-mode="true"] input,
+html[data-dark-mode="true"] textarea,
+html[data-dark-mode="true"] select {
+    background-color: transparent !important;
+}
+
+/* Handle code blocks and pre elements */
+html[data-dark-mode="true"] pre,
+html[data-dark-mode="true"] code {
+    background-color: transparent !important;
+}
