@@ -1,0 +1,50 @@
+
+#theme-toggle-button {
+  position: fixed;
+  top: 20px;
+  left: calc(100% - 80px);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2147483647;
+  cursor: grab;
+}
+
+#theme-toggle-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#theme-toggle-button:active {
+  cursor: grabbing;
+}
+
+#theme-toggle-button img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle-button.visible img:hover {
+  transform: rotate(25deg) scale(1.1);
+}
+
+/* Dark Mode Styles */
+.dark-mode-maza, .dark-mode-maza * {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+  border-color: #333 !important;
+}
+
+.dark-mode-maza a {
+  color: #81a1c1 !important;
+}

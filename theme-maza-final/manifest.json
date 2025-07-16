@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Theme Maza Final",
+  "version": "1.0",
+  "description": "Floating sun/moon button for real dark‑light toggle.",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+
+  "action": { "default_title": "Theme Toggle" },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [ "icons/sun.svg", "icons/moon.svg" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}
