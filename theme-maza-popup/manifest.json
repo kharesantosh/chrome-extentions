@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Theme Maza Popup",
+  "version": "1.0",
+  "description": "Toggle dark/light mode with a popup switch",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/sun.svg"
+    }
+  },
+  "background": {
+    "service_worker": "content.js"
+  }
+}
